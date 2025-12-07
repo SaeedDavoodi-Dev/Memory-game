@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@layer utilities{
+    .flipped{
+        @apply rotate-y-180
+    }
+    .matched{
+        @apply opacity-70 cursor-default border-2 border-green-200 bg-repeat
+    }
+    .restart-btn{
+        @apply absolute top-8 right-6 p-2 sm:p-3 bg-[#3b82f6] text-white rounded-2xl cursor-pointer hover:bg-[#2563eb]
+    }
+    .tran{
+        transition: all 0.3s ease;
+    }
+    .flip{
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    }
+    .front{
+        background-image: linear-gradient(135deg, #fbbf24, #f59e0b) !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .back{
+        box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@keyframes mAnime{
+    0%, 100%{scale: 1;}
+    50%{scale: 1.1;}
+}

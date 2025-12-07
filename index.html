@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="font/remixicon.css">
+    <link rel="stylesheet" href="css/output.css">
+</head>
+<body>
+
+    <div class="score-board absolute bg-gray-200 top-8 left-7 w-40 sm:w-52 p-2 sm:p-3 rounded-2xl border border-[rgba(255, 255, 255, 0.2)] tran flex flex-wrap shadow-[0_10px_25px_rgba(0, 0, 0, 0.15)] backdrop-blur-md hover:-translate-y-0.5 hover:shadow-[0_15px_30px_rgba(0, 0, 0, 0.2)]">
+        <div class="score pb-2 w-full font-semibold text-[#333]">score : <span class="font-extrabold" id="score" >0</span></div>
+        <div class="pairs w-full font-semibold text-[#333]">Pairis found : <span class="font-extrabold" id="pairs">0</span>/8</div>
+    </div>
+
+    <main class="w-full h-dvh bg-[#524532]">
+        <div class="w-full h-full 2xl:container mx-auto flex justify-center items-end">
+            <div class="box *:tran w-5/6 h-3/5 md:h-2/3 md:w-3/5 lg:w-1/2 xl:w-2/5 mb-10 flex flex-wrap">
+                <div class="flip w-1/4 h-1/4 cursor-pointer transform-3d relative duration-500">
+                    <div class="front absolute w-full h-full backface-hidden bg-amber-400 border-2 border-white"></div>
+                    <div class="back absolute w-full h-full backface-hidden flex bg-gray-200 justify-center items-center rotate-y-180">
+
+                    </div>
+                </div>
+                <div class="flip w-1/4 h-1/4 cursor-pointer transform-3d relative duration-500">
+                    <div class="front absolute w-full h-full backface-hidden bg-amber-400 border-2 border-white"></div>
+                    <div class="back absolute w-full h-full backface-hidden flex bg-gray-200 justify-center items-center rotate-y-180">
+
+                    </div>
+                </div>
+                <div class="flip w-1/4 h-1/4 cursor-pointer transform-3d relative duration-500">
+                    <div class="front absolute w-full h-full backface-hidden bg-amber-400 border-2 border-white"></div>
+                    <div class="back absolute w-full h-full backface-hidden flex bg-gray-200 justify-center items-center rotate-y-180">
+
+                    </div>
+                </div>
+                <div class="flip w-1/4 h-1/4 cursor-pointer transform-3d relative duration-500">
+                    <div class="front absolute w-full h-full backface-hidden bg-amber-400 border-2 border-white"></div>
+                    <div class="back absolute w-full h-full backface-hidden flex bg-gray-200 justify-center items-center rotate-y-180">
+
+                    </div>
+                </div>
+                <div class="flip w-1/4 h-1/4 cursor-pointer transform-3d relative duration-500">
+                    <div class="front absolute w-full h-full backface-hidden bg-amber-400 border-2 border-white"></div>
+                    <div class="back absolute w-full h-full backface-hidden flex bg-gray-200 justify-center items-center rotate-y-180">
+
+                    </div>
+                </div>
+                <div class="flip w-1/4 h-1/4 cursor-pointer transform-3d relative duration-500">
+                    <div class="front absolute w-full h-full backface-hidden bg-amber-400 border-2 border-white"></div>
+                    <div class="back absolute w-full h-full backface-hidden flex bg-gray-200 justify-center items-center rotate-y-180">
+
+                    </div>
+                </div>
+                <div class="flip w-1/4 h-1/4 cursor-pointer transform-3d relative duration-500">
+                    <div class="front absolute w-full h-full backface-hidden bg-amber-400 border-2 border-white"></div>
+                    <div class="back absolute w-full h-full backface-hidden flex bg-gray-200 justify-center items-center rotate-y-180">
+
+                    </div>
+                </div>
+                <div class="flip w-1/4 h-1/4 cursor-pointer transform-3d relative duration-500">
+                    <div class="front absolute w-full h-full backface-hidden bg-amber-400 border-2 border-white"></div>
+                    <div class="back absolute w-full h-full backface-hidden flex bg-gray-200 justify-center items-center rotate-y-180">
+
+                    </div>
+                </div>
+                <div class="flip w-1/4 h-1/4 cursor-pointer transform-3d relative duration-500">
+                    <div class="front absolute w-full h-full backface-hidden bg-amber-400 border-2 border-white"></div>
+                    <div class="back absolute w-full h-full backface-hidden flex bg-gray-200 justify-center items-center rotate-y-180">
+
+                    </div>
+                </div>
+                <div class="flip w-1/4 h-1/4 cursor-pointer transform-3d relative duration-500">
+                    <div class="front absolute w-full h-full backface-hidden bg-amber-400 border-2 border-white"></div>
+                    <div class="back absolute w-full h-full backface-hidden flex bg-gray-200 justify-center items-center rotate-y-180">
+
+                    </div>
+                </div>
+                <div class="flip w-1/4 h-1/4 cursor-pointer transform-3d relative duration-500">
+                    <div class="front absolute w-full h-full backface-hidden bg-amber-400 border-2 border-white"></div>
+                    <div class="back absolute w-full h-full backface-hidden flex bg-gray-200 justify-center items-center rotate-y-180">
+
+                    </div>
+                </div>
+                <div class="flip w-1/4 h-1/4 cursor-pointer transform-3d relative duration-500">
+                    <div class="front absolute w-full h-full backface-hidden bg-amber-400 border-2 border-white"></div>
+                    <div class="back absolute w-full h-full backface-hidden flex bg-gray-200 justify-center items-center rotate-y-180">
+
+                    </div>
+                </div>
+                <div class="flip w-1/4 h-1/4 cursor-pointer transform-3d relative duration-500">
+                    <div class="front absolute w-full h-full backface-hidden bg-amber-400 border-2 border-white"></div>
+                    <div class="back absolute w-full h-full backface-hidden flex bg-gray-200 justify-center items-center rotate-y-180">
+
+                    </div>
+                </div>
+                <div class="flip w-1/4 h-1/4 cursor-pointer transform-3d relative duration-500">
+                    <div class="front absolute w-full h-full backface-hidden bg-amber-400 border-2 border-white"></div>
+                    <div class="back absolute w-full h-full backface-hidden flex bg-gray-200 justify-center items-center rotate-y-180">
+
+                    </div>
+                </div>
+                <div class="flip w-1/4 h-1/4 cursor-pointer transform-3d relative duration-500">
+                    <div class="front absolute w-full h-full backface-hidden bg-amber-400 border-2 border-white"></div>
+                    <div class="back absolute w-full h-full backface-hidden flex bg-gray-200 justify-center items-center rotate-y-180">
+
+                    </div>
+                </div>
+                <div class="flip w-1/4 h-1/4 cursor-pointer transform-3d relative duration-500">
+                    <div class="front absolute w-full h-full backface-hidden bg-amber-400 border-2 border-white"></div>
+                    <div class="back absolute w-full h-full backface-hidden flex bg-gray-200 justify-center items-center rotate-y-180">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+        <section class="w-full 2xl:container mx-auto h-[70dvh] 2xl:h-[90dvh]">
+        <div class="footer flex w-full h-full items-center bg-neutral-100 justify-center">
+            <div class="w-5/6 md:w-2/3 lg:w-1/2 flex rounded-4xl">
+                <figure class="w-3/5 pr-2"><img class="w-full h-full object-cover rounded-[70%_30%_40%_60%_/_30%_30%_70%_70%]" src="img/footer.png" alt=""></figure>
+                <div class="w-2/5 pl-3">
+                    <h2 class="capitalize font-bold text-[4vw] md:text-[3vw] lg:text-[2.5vw] mb-7 border-b-2 pb-0.5">saeed davoodi</h2>
+                    <span class="flex"><a href="https://www.linkedin.com/in/saeed-davoodi-127412368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="flex mb-3 ml-7"><i class="flex duration-300 hover:scale-[1.2] ri-linkedin-box-fill text-4xl md:text-5xl text-[#0a66c2]"></i></a></span>
+                    <span class="flex"><a href="https://github.com/SaeedDavoodi-Dev" target="_blank" class="flex mb-3 ml-7"><i class="flex git duration-300 hover:scale-[1.2] ri-github-fill text-4xl md:text-5xl text-[#4c4c4d]"></i></a></span>
+                    <span class="flex"><a href="https://www.instagram.com/saeed.davoodi_dev?igsh=MW8yazNpY2NzenV6Yg==" target="_blank" class="mb-3 ml-7"><i class="flex duration-300 hover:scale-[1.2] ri-instagram-fill text-4xl md:text-5xl text-[#ff0267]"></i></a></span>
+                </div>
+            </div>
+        </div>
+      </section>
+</body>
+
+<script src="js/master.js"></script>
+</html>
